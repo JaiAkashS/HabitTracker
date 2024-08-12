@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabiTrack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Pixel Mando.png" type="image/x-icon">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const form = document.querySelector('form')
+          form.addEventListener('submit', event => {
+            // submit event detected
+            event.preventDefault()
+            console.log('form submit event!')
+          })
+        })
+      </script>
+</head>
+<body>
+    <p>Hello</p>
+    <form  method="post">
+        <div>
+            <label for="keybr">Typing Practise</label>
+            <input type="file" name="voice"  accept="audio/*" capture />
+        </div>
+        <div>
+        <fieldset name="deardiary">
+            <legend>Dear Diary</legend>
+            <!-- <label for="DearDiary">Type What Happened in the Day</label> -->
+            <textarea name="DearDiary" id="deardiary" rows="20" cols="100">"Type what Happened in the day"</textarea>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </fieldset>
+        <fieldset class="habittracker">
+            <legend>Habit Tracker</legend>
+            <div>
+                <input class="date"  type="date">
+            </div>
+            <label for="keybr">Typing Practise</label>
+            <input type="checkbox" name="keybr" id="keybr">
+            <label for="Learn Java">Learning Java!</label>
+            <input type="checkbox" name="learnjava" id="learnjava">
+            <label for="leetcode">Leetcode!</label>
+            <input type="checkbox" name="leetcode" id="leetcode">
+        </fieldset>
+        <data value="date"></data>
+        </div> 
+    </form>
+</body>
+</html>
