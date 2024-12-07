@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabiTrack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../icons/Pixel Mando.png" type="image/x-icon">
+    <script src="script.js"></script>
+</head>
+<body>
+    <form  action="/submit-habit" method="post">
+        <fieldset name="deardiary">
+            <legend>Dear Diary</legend>
+            <textarea name="DearDiary" id="deardiary" rows="20" cols="100" placeholder="Type what Happened in the day"></textarea>
+        </fieldset>
+        <fieldset class="habittracker">
+            <legend>Habit Tracker</legend>
+            <div class="habits">
+                <img src="../icons/Keyboard.png">
+                <div>
+                    <label for="keybr">Typing Practise</label>
+                    <input type="checkbox" name="keybrStatus" id="keybr" >
+                    <div class="items">
+                        <p class="streak">Streak</p>
+                        <input type="range" name="keybrTimeSpent" id="keybrrange" min="0" max="60" value="15" step="15">
+                    </div>
+                </div>
+            </div>
+            <div class="habits">
+                <img src="../icons/monitor.png">
+                <div class="">
+                    <label for="Learn Java">Learning Java!</label>
+                    <input type="checkbox" name="learnjavaStatus" id="learnjava" >
+                    <div class="items">
+                       <div><p class="streak">Streak</p></div> 
+                       <div><input type="range" name="LearnjavaTimeSpent" id="javarange" min="0" max="60" value="15" step="15"></div> 
+                    </div>
+                </div>
+            </div>
+            <div class="habits">
+                <img src="../icons/leetcode.png">
+                <div>
+                    <label for="leetcode">Leetcode!</label>
+                    <input type="checkbox" name="leetcodeStatus" id="leetcode" >
+                    <div class="items">
+                        <div><p class="streak" >Streak</p></div>
+                        <div><input  type="range" name="LeetcodeTimeSpent" id="leetcoderange" min="0" max="60" value="15" step="15"></div>
+                    </div>
+                </div>
+            </div>
+            <div><input type="submit" value="Submit"></div>
+        </fieldset>
+        </div> 
+    </form>
+</body>
+</html>

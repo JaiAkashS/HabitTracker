@@ -1,0 +1,59 @@
+body{
+    background-color:   #405D72;
+    font-family: '0xProtoNerdFontPropo', Courier, monospace;
+   
+}
+fieldset{
+    margin: auto;
+    width: 1600px;
+    background-color: #F7E7DC;
+    font-size: 25px;
+
+    color: #000;
+}
+textarea{
+    background-color: #FFF8F3;
+    /* background-color: #758694; */
+}
+
+.habittracker{
+    height:700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.date{
+    position:fixed right ; 
+}
+
+.habits{
+    font-size: 30px;
+    height: 150px;
+    display: flex;
+     box-shadow: 10px 10px 5px #b8aba3;
+}
+
+img{
+    max-width: 140px;
+    max-height: 140px;
+}
+
+.streak{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.items{
+    align-items: center;
+    max-height: 52px;
+    display: flex;
+}
+
+.habits div{
+    align-content: center;
+}
+legend{
+    font-size: 35px;
+    background-color: #405D72;
+}
