@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import habitServices from "../services/habitServices";
+
 
 const initialState = {
   DearDiary: "",
+  date: new Date().toISOString().substring(0,10),
   keybrStatus: false,
   keybrTimeSpent: 15,
   learnjavaStatus: false,
@@ -16,7 +19,7 @@ const initialStreaks = {
   leetcode: 0,
 };
 
-export default function HabitForm() {
+function HabitForm() {
   const [form, setForm] = useState(initialState);
   const [streaks, setStreaks] = useState(initialStreaks);
 
@@ -30,18 +33,16 @@ export default function HabitForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Update streaks if habit is checked
     setStreaks((prev) => ({
       keybr: form.keybrStatus ? prev.keybr + 1 : prev.keybr,
       learnjava: form.learnjavaStatus ? prev.learnjava + 1 : prev.learnjava,
       leetcode: form.leetcodeStatus ? prev.leetcode + 1 : prev.leetcode,
     }));
-    await fetch("/submit-habit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
-    setForm(initialState);
+    await habitServices.create(JSON.stringify(form)).then(
+      returnedEntry => {
+        setForm(returnedEntry)
+      }
+    )
   };
 
   return (
@@ -60,7 +61,7 @@ export default function HabitForm() {
       <fieldset className="habittracker">
         <legend>Habit Tracker</legend>
         <div className="habits">
-          <img src={process.env.PUBLIC_URL + "/icons/Keyboard.png"} alt="Typing" />
+          <img src={"/icons/Keyboard.png"} alt="Typing" />
           <div>
             <label>
               Typing Practise
@@ -90,7 +91,7 @@ export default function HabitForm() {
           </div>
         </div>
         <div className="habits">
-          <img src={process.env.PUBLIC_URL + "/icons/monitor.png"} alt="Java" />
+          <img src={"/icons/monitor.png"} alt="Java" />
           <div>
             <label>
               Learning Java!
@@ -120,7 +121,7 @@ export default function HabitForm() {
           </div>
         </div>
         <div className="habits">
-          <img src={process.env.PUBLIC_URL + "/icons/leetcode.png"} alt="Leetcode" />
+          <img src={"/icons/leetcode.png"} alt="Leetcode" />
           <div>
             <label>
               Leetcode!
@@ -154,5 +155,7 @@ export default function HabitForm() {
         </div>
       </fieldset>
     </form>
-  );
+  )
 }
+
+export default HabitForm;

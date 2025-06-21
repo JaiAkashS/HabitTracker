@@ -1,0 +1,48 @@
+{
+  "entries": [
+    {
+      "DearDiary": "",
+      "date": "2025-06-19",
+      "keybrStatus": false,
+      "keybrTimeSpent": 15,
+      "learnjavaStatus": false,
+      "LearnjavaTimeSpent": 15,
+      "leetcodeStatus": false,
+      "LeetcodeTimeSpent": 15,
+      "id": "a3a9"
+    },
+    {
+      "DearDiary": "",
+      "date": "2025-06-19",
+      "keybrStatus": false,
+      "keybrTimeSpent": 15,
+      "learnjavaStatus": false,
+      "LearnjavaTimeSpent": 15,
+      "leetcodeStatus": false,
+      "LeetcodeTimeSpent": 15,
+      "id": "b7db"
+    },
+    {
+      "id": "e610",
+      "DearDiary": "",
+      "date": "2025-06-21",
+      "keybrStatus": false,
+      "keybrTimeSpent": 15,
+      "learnjavaStatus": false,
+      "LearnjavaTimeSpent": 15,
+      "leetcodeStatus": false,
+      "LeetcodeTimeSpent": 15
+    },
+    {
+      "id": "e610",
+      "DearDiary": "hello\n",
+      "date": "2025-06-21",
+      "keybrStatus": false,
+      "keybrTimeSpent": 15,
+      "learnjavaStatus": false,
+      "LearnjavaTimeSpent": 15,
+      "leetcodeStatus": false,
+      "LeetcodeTimeSpent": 15
+    }
+  ]
+}

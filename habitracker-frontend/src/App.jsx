@@ -1,5 +1,7 @@
 import React from "react";
-import HabitForm from "./HabitForm";
+import HabitForm from "./components/HabitForm";
+import habitServices from "./services/habitServices";
+
 
 function App() {
   return (
